@@ -21,17 +21,52 @@ h1 {
 .widget {
 	font-size: 2em;
 	margin: auto;
-	width: max-content;
+	width: 24rem;
 }
 
 .widget * {
 	font-size: 1em;
-	padding: 0.5em;
+	padding: 1rem;
+}
+
+.challenge {
+	text-align: center;
 }
 
 input {
-	background: #222;
-	border: 1px solid currentColor;
+	text-align: center;
+	width: 100%;
+	font: inherit;
+	background: #aaaaaa08;
+	border: 3px solid #aaa4;
 	border-radius: 1em;
 	color: currentColor;
+}
+
+input:focus {
+	outline: none;
+	border-color: #0ff4;
+}
+
+.widget footer {
+	display: flex;
+	font-size: 0.7em;
+	padding: 0.3em 1em;
+}
+
+.widget footer > * {
+	padding: 0.1em;
+}
+
+.answers {
+	display: none;
+	color: lime;
+}
+
+.answers[data-show] {
+	display: block;
+}
+
+.count {
+	margin-left: auto;
 }
