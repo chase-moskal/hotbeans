@@ -1,0 +1,21 @@
+#!/bin/bash
+
+rm -rf x
+mkdir x
+
+(
+	cd s
+	cp --recursive --parents . ../x
+)
+
+(
+	cd x
+
+	commit_id=$(git rev-parse --short HEAD)
+
+	find . \
+		-type f \
+		-name "*.html" \
+		-exec sed \
+		-i "s/\$VERSION/${commit_id}/g" {} \;
+)
