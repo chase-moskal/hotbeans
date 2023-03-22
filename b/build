@@ -9,6 +9,13 @@ mkdir x
 )
 
 (
+	npx rollup x/script.js \
+		-p @rollup/plugin-node-resolve \
+		--format es \
+		--file x/script.bundle.js
+)
+
+(
 	cd x
 
 	commit_id=$(git rev-parse --short HEAD)
