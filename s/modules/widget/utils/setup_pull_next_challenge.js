@@ -4,7 +4,7 @@ export function setup_pull_next_challenge(words, update) {
 
 	return () => {
 		if (hat.length === 0)
-			hat = words
+			hat = structuredClone(words)
 
 		const index = Math.floor(Math.random() * hat.length)
 		const [chosen] = hat.splice(index, 1)
